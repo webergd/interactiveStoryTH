@@ -21,6 +21,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "startAdventure" { //that way this shit only happens when a specific seque is activated
+            if let PageController = segue.destinationViewController as? PageController {
+                PageController.page = Adventure.story
+            }
+        }
+    }
 
 
 }
