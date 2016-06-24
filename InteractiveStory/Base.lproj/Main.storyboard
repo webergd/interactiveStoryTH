@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GIq-xg-vI7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GIq-xg-vI7">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -27,18 +28,30 @@
                                     <segue destination="lsM-zq-RQ1" kind="show" identifier="startAdventure" id="Bgl-mV-2bx"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="25t-8F-gkL">
+                                <rect key="frame" x="44" y="452" width="512" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="A0k-y7-KdF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3r3-hq-TwH"/>
+                            <constraint firstItem="9GZ-Lj-LWQ" firstAttribute="top" secondItem="25t-8F-gkL" secondAttribute="bottom" constant="40" id="Csd-mk-9dl"/>
                             <constraint firstItem="9GZ-Lj-LWQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rhq-fR-CWx"/>
+                            <constraint firstItem="25t-8F-gkL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="a1K-qQ-nFE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="25t-8F-gkL" secondAttribute="trailing" constant="24" id="cV5-HU-hiU"/>
                             <constraint firstItem="A0k-y7-KdF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ckG-vL-dKh"/>
+                            <constraint firstItem="25t-8F-gkL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gTH-XB-Hqu"/>
                             <constraint firstAttribute="trailing" secondItem="A0k-y7-KdF" secondAttribute="trailing" id="l6o-kj-L1g"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9GZ-Lj-LWQ" secondAttribute="bottom" constant="48" id="mD1-4x-k5R"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="A0k-y7-KdF" secondAttribute="bottom" id="w4p-oz-WCY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gdJ-cH-JRa"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="25t-8F-gkL" id="zg2-Kr-GZa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
